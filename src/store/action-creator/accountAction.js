@@ -1,22 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-function income(amount, dispatch) {
-
-    (async () => dispatch({
+export function income(amount) {
+    return (dispatch) => dispatch({
         type: "INCOME",
         payload: amount
-    })
-    )
+    });
 }
 
-
-function expense(amount, dispatch) {
-
-    (async () => dispatch({
+export function expense(amount) {
+    return (dispatch) => dispatch({
         type: "EXPENSE",
         payload: amount
-    })
-    )
+    });
 }
-
-export default { expense, income }

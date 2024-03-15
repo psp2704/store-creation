@@ -1,10 +1,10 @@
-import { createAction, createStore } from '@reduxjs/toolkit'
-import React from 'react'
+import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import React from 'react';
+import accountReducer from './action-creator/accountReducer';
 
-function index() {
- const store = createAction('index')
- return (
-  <div></div>
-}
+const store = configureStore({
+  reducer: accountReducer,
+ 
+});
 
-export default index
+export default store;

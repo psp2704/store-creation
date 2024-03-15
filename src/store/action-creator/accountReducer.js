@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-function accountReducer(state, action) {
- const {type, payload} = action;
- switch(type){
-    case "INCOME" : {
-        state : state + amount
+function accountReducer(state = 0, action) {
+    const { type, payload } = action;
+    switch (type) {
+        case "INCOME":
+            return state + payload;
+        case "EXPENSE":
+            return state - payload;
+        default:
+            return state;
     }
-    case "EXPENSE" : {
-        state : state-amount
-    } 
-    default: return state  
-    }
-
 }
 
-export default accountReducer
+export default accountReducer;
