@@ -45,10 +45,10 @@ import React, { createContext, useReducer } from 'react'
 
         const toggle = () =>{
             const main = document.getElementsByTagName('main')[0];
-            if(!main.classList.contains("bg-dark")){
-                main.className="bg-dark";
+            if(!main.classList.contains("bg-primary")){
+                main.className="bg-primary";
             }else{
-                main.classList.remove("bg-dark");
+                main.classList.remove("bg-primary");
             }
         }
 

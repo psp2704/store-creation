@@ -8,11 +8,11 @@ import { useSelector } from 'react-redux';
 
 function App() {
  const {toggle,state} = useContext(DataContext); 
- const amount = useSelector(state => state.amount);
+ const amount = useSelector(state => state);
  console.log(amount)
  return (
     <>
-      <main className='bg-dark'>
+      <main className=''>
         <Nvabar />
         <div className='text-center'>
           <h1 >Account</h1>

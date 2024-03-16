@@ -1,6 +1,6 @@
 import React from 'react';
 
-function accountReducer(state = 0, action) {
+function accountReducer(state = 100, action) {
     const { type, payload } = action;
     switch (type) {
         case "INCOME":
